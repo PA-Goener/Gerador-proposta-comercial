@@ -335,7 +335,7 @@ class PowerPointUpdater:
             elif text.startswith("R$ aBBa"):
                 TextFormatter.update_text_shape(
                     shape, 
-                    text1=f"R$ {TextFormatter.format_money_br(conta_antes['custo mínimo'])}", 
+                    text1=f"R$ {TextFormatter.format_money_br(conta_depois['valor em energia'])}", 
                     font1="Inter", 
                     size1=21
                 )
@@ -379,7 +379,7 @@ class PowerPointUpdater:
                 savings = conta_antes['total'] - conta_depois['total']
                 TextFormatter.update_text_shape(
                     shape, 
-                    text1=f"R$ {TextFormatter.format_money_br(savings)}", 
+                    text1=f"R$ {TextFormatter.format_money_br(12 * savings)}", 
                     font1="Inter Bold", 
                     size1= 21
                 ) 
