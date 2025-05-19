@@ -208,7 +208,7 @@ class FinancialCalculator:
         total_bill_discounted = taxes + public_ilumination_cost + min_cost + energy_cost_discounted       
         
         return {
-            'valor em energia': energy_cost,
+            'valor em energia': energy_cost_discounted,
             'custo mínimo': min_cost,
             'iluminação pública': public_ilumination_cost,
             'impostos': taxes,
@@ -299,7 +299,7 @@ class PowerPointUpdater:
                     size1=20
                 )
 
-            elif text.startswith("YY%"):
+            elif text.startswith("YY"):
                 TextFormatter.update_text_shape(
                     shape, 
                     text1=f"{discount}%", 
@@ -325,14 +325,15 @@ class PowerPointUpdater:
                 )
                 
             elif text.startswith("R$ BBBB"):
+                total_imposto = conta_antes['impostos'] + conta_antes['iluminação pública'] + conta_antes['custo mínimo']
                 TextFormatter.update_text_shape(
                     shape, 
-                    text1=f"R$ {TextFormatter.format_money_br(conta_antes['custo mínimo'])}", 
+                    text1=f"R$ {TextFormatter.format_money_br(total_imposto)}", 
                     font1="Inter Bold", 
                     size1=21
                 )
 
-            elif text.startswith("R$ aBBa"):
+            elif text.startswith("R$ KKKK"):
                 TextFormatter.update_text_shape(
                     shape, 
                     text1=f"R$ {TextFormatter.format_money_br(conta_depois['valor em energia'])}", 
@@ -344,6 +345,14 @@ class PowerPointUpdater:
                 TextFormatter.update_text_shape(
                     shape, 
                     text1=f"R$ {TextFormatter.format_money_br(conta_depois['valor em energia'])}", 
+                    font1="Inter Bold", 
+                    size1=21
+                )
+
+            elif text.startswith("R$ DCCC"):
+                TextFormatter.update_text_shape(
+                    shape, 
+                    text1=f"R$ {TextFormatter.format_money_br(conta_depois['total'])}", 
                     font1="Inter Bold", 
                     size1=21
                 )
