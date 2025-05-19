@@ -332,7 +332,7 @@ class PowerPointUpdater:
                     size1=21
                 )
 
-            elif text.startswith(" R$ aBBa"):
+            elif text.startswith("R$ aBBa"):
                 TextFormatter.update_text_shape(
                     shape, 
                     text1=f"R$ {TextFormatter.format_money_br(conta_antes['custo mínimo'])}", 
