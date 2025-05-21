@@ -307,12 +307,13 @@ class PowerPointUpdater:
                     size1=21
                 )
 
-            elif text.startswith("WYZK"):
+            elif text.startswith("WY"):
                 TextFormatter.update_text_shape(
                     shape, 
-                    text1=f"Total de Desconto por mês com {discount}%", 
+                    text1=f"Desconto mensal de {discount}%", 
                     font1="Inter", 
-                    size1=13
+                    size1=13,
+                    center_align=False
                 )
                             
             # Current consumption cost field
@@ -389,7 +390,8 @@ class PowerPointUpdater:
                     shape, 
                     text1=f"R$ {TextFormatter.format_money_br(savings)}", 
                     font1="Inter Bold", 
-                    size1= 37
+                    size1= 37,
+                    center_align=False
                 )
 
             elif text.startswith("R$ EEEB"):
@@ -407,7 +409,8 @@ class PowerPointUpdater:
                     shape, 
                     text1=f"R$ {TextFormatter.format_money_br(12 * savings)}", 
                     font1="Inter Bold", 
-                    size1=37
+                    size1=37,
+                    center_align=False
                 )
 
             elif text.startswith("R$ GGGG"):
@@ -416,7 +419,8 @@ class PowerPointUpdater:
                     shape, 
                     text1=f"R$ {TextFormatter.format_money_br(12 * 5 * savings)}", 
                     font1="Inter Bold", 
-                    size1=37
+                    size1=37,
+                    center_align=False
                 ) 
                 
             elif text.startswith("R$ HHHH"):
