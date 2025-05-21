@@ -302,9 +302,10 @@ class PowerPointUpdater:
             elif text.startswith("YY"):
                 TextFormatter.update_text_shape(
                     shape, 
-                    text1=f"{discount}%", 
-                    font1="Inter Bold", 
-                    size1=21
+                    text1=f"{discount}% sob o consumo de energia", 
+                    font1="Inter", 
+                    size1=21,
+                    center_align=False
                 )
 
             elif text.startswith("WY"):
