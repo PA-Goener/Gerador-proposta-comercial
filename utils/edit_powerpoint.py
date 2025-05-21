@@ -306,6 +306,14 @@ class PowerPointUpdater:
                     font1="Inter Bold", 
                     size1=21
                 )
+
+            elif text.startswith("WYZK"):
+                TextFormatter.update_text_shape(
+                    shape, 
+                    text1=f"Total de Desconto por mês com {discount}%", 
+                    font1="Inter", 
+                    size1=13
+                )
                             
             # Current consumption cost field
             elif text.startswith("R$ AAAA"):
