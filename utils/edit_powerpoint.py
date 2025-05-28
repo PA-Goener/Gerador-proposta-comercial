@@ -23,8 +23,8 @@ logger = logging.getLogger('powerpoint_editor')
 # Define constants for better maintainability
 class TarifaConstants:
     # ENEL CE Tariffs
-    TE_ENEL_CE = 0.27291
-    TUSD_ENEL_CE = 0.44929
+    TE_ENEL_CE = 0.23250
+    TUSD_ENEL_CE = 0.08846
     
     # Tax rates
     ICMS = 0.2
